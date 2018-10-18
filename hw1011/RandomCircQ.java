@@ -20,15 +20,15 @@ public class RandomCircQ {
 		
 		for (int z = 0; z < 3; z++){
 			System.out.println("round " + z);
-			int x = random.nextInt(5) + 1;
+			int x = random.nextInt(5) +1;
+			int y = random.nextInt(5) + 1;
 			System.out.println("x " + x);
+		
 			for (int i = 0; i < x; i++){
 				int a = random.nextInt(100); //bound is exclusive not inclusive so need to go to 100 to get to 99
 				System.out.println("\t\t a " + a);
 				cq.insert(a);
 			}
-			
-			int y = random.nextInt(5) + 1; 
 			System.out.println("y " + y);
 			for (int j = 0; j < y; j++){
 				System.out.println("\t delete");
