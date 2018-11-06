@@ -1,4 +1,12 @@
-
+/*
+ * Aaron Stark
+ * COSC 311
+ * pp1016
+ * FALL 2018
+ * https://github.com/aaronsta/COSC311/tree/master/pp1016
+ * 
+ * 
+ */
 public class Server {
 	private Client clientServing;
 	private boolean isBusy;
@@ -6,7 +14,6 @@ public class Server {
 	private int timeRemainingWithClient;
 	
 	public Server(){
-		//isBusy;
 	}
 	
 	public void setClientServing(Client c){
@@ -33,6 +40,7 @@ public class Server {
 			//on later rounds, calculate elapsed time and compare with client's server time in order to calculate if we are done
 			if(isBusy == true){
 				int elapsedTimeWithClient = tick - startingTime;
+				timeRemainingWithClient = elapsedTimeWithClient;
 				if (elapsedTimeWithClient >= clientServing.getServerTime()){
 					result = true;
 				}
