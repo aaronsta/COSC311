@@ -18,7 +18,6 @@ public class Server {
 	
 	public void setClientServing(Client c){
 		clientServing = c;
-	//	System.out.println("Server setting client being served to " + c.toString());
 	}
 	
 	public Client getClientServed(){

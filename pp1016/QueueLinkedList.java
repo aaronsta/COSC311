@@ -90,12 +90,6 @@ public class QueueLinkedList {
 		while (pointer != null){
 			int oldTime = pointer.data.getWaitTime();
 			pointer.data.setWaitTime(oldTime + 1);
-		/*
-			if (pointer.data.getPrecederTimeAfterSwitch() != -1){//make sure it is not the intialized value
-				int oldPrecederTime = pointer.data.getPrecederTimeAfterSwitch();
-				pointer.data.setPrecederTimeAfterSwitch(oldPrecederTime + 1);
-			}
-			*/
 			pointer = pointer.next;
 		}
 	}

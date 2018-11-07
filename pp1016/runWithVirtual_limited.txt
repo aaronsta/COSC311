@@ -1,0 +1,742 @@
+==========================================
+tick # 108
+	 switched 0108 and added to queue 2 
+tick # 108 server 1 end service on customer 094
+tick # 108 virtual server 1 end service on customer 094_V
+tick # 108 server 2 start service on customer 0108D server time 2
+number arrived 1
+queue 1: server busy false
+queue 1: 3
+queue 1 
+ id 0102 current wait time 7 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0104 current wait time 5 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0105 current wait time 4 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy false
+queue 1 virtual: 4
+queue 1 virtual 
+ id 0102_V current wait time 7 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0104_V current wait time 5 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0105_V current wait time 4 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0108_V current wait time 1 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 1
+queue 2 
+ id 0108 current wait time 1 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+==========================================
+...
+==========================================
+tick # 111
+tick # 111 server 1 start service on customer 0104 server time 0
+tick # 111 server 1 Virtual start service on customer 0104_V server time 0
+tick # 111 server 2 start service on customer 0108 server time 4
+	 switched client being served 
+ id 0108 current wait time 3 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0
+id 0108_V is still in queue 1 virtual, so Q2 beat Q1. set would have waited by adding up prev wts?
+traverseAndAddUpWaitTimes 0105_V
+added preceding server time 3
+traverseAndAddUpWaitTimes 0108_V
+added its own wait time 3
+total up until is 6
+would have waited time on 0108 is 6
+number arrived 1
+queue 1: server busy true
+queue 1: 2
+queue 1 
+ id 0105 current wait time 7 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0111 current wait time 1 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 3
+queue 1 virtual 
+ id 0105_V current wait time 7 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0108_V current wait time 4 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0111_V current wait time 1 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 1
+queue 2 
+ id 0111D current wait time 1 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+==========================================
+
+
+...
+
+==========================================
+tick # 146
+	 switched 0146 and added to queue 2 
+number arrived 1
+queue 1: server busy true
+queue 1: 2
+queue 1 
+ id 0145 current wait time 2 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1145 current wait time 2 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 3
+queue 1 virtual 
+ id 0145_V current wait time 2 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1145_V current wait time 2 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0146_V current wait time 1 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 5
+queue 2 
+ id 0140D current wait time 7 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0145D current wait time 2 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 1145D current wait time 2 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0146D current wait time 1 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0146 current wait time 1 original queue 1  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+==========================================
+
+...
+==========================================
+tick # 160
+tick # 160 server 1 start service on customer 0151 server time 5
+tick # 160 server 1 Virtual start service on customer 0146_V server time 1
+0146
+Queue 2 is serving 0145D
+id 0146 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 14 on 0146
+tick # 160 server 2 start service on customer 1145D server time 5
+number arrived 1
+queue 1: server busy true
+queue 1: 3
+queue 1 
+ id 0152 current wait time 9 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0156 current wait time 5 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0160 current wait time 1 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 4
+queue 1 virtual 
+ id 0151_V current wait time 10 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0152_V current wait time 9 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0156_V current wait time 5 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0160_V current wait time 1 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 6
+queue 2 
+ id 0146D current wait time 15 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0146 current wait time 15 original queue 1  current queue 2 serverTime 1 wouldHaveWaitedTime 14, 
+ id 0151D current wait time 10 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0152D current wait time 9 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0156D current wait time 5 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0160D current wait time 1 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+==========================================
+...
+==========================================
+tick # 165
+	 switched 0165 and added to queue 2 
+tick # 165 server 1 end service on customer 0151
+tick # 165 server 2 end service on customer 1145D
+number arrived 1
+queue 1: server busy false
+queue 1: 3
+queue 1 
+ id 0152 current wait time 14 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0156 current wait time 10 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0160 current wait time 6 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 4
+queue 1 virtual 
+ id 0152_V current wait time 14 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0156_V current wait time 10 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0160_V current wait time 6 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0165_V current wait time 1 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+queue 2: server busy false
+queue 2: 8
+queue 2 
+ id 0146D current wait time 20 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0146 current wait time 20 original queue 1  current queue 2 serverTime 1 wouldHaveWaitedTime 14, 
+ id 0151D current wait time 15 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0152D current wait time 14 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0156D current wait time 10 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0160D current wait time 6 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0165D current wait time 1 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 1 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+==========================================
+
+
+...
+==========================================
+tick # 170
+tick # 170 server 1 start service on customer 0156 server time 0
+tick # 170 server 2 start service on customer 0146 server time 1
+	 switched client being served 
+ id 0146 current wait time 24 original queue 1  current queue 2 serverTime 1 wouldHaveWaitedTime 14
+number arrived 0
+queue 1: server busy true
+queue 1: 1
+queue 1 
+ id 0160 current wait time 11 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 3
+queue 1 virtual 
+ id 0156_V current wait time 15 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0160_V current wait time 11 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0165_V current wait time 6 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 6
+queue 2 
+ id 0151D current wait time 20 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0152D current wait time 19 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0156D current wait time 15 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0160D current wait time 11 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0165D current wait time 6 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 6 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+==========================================
+
+...
+==========================================
+tick # 175
+	 switched 1175 and added to queue 2 
+tick # 175 virtual server 1 end service on customer 0160_V
+number arrived 2
+queue 1: server busy true
+queue 1: 3
+queue 1 
+ id 0173 current wait time 3 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0174 current wait time 2 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175 current wait time 1 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy false
+queue 1 virtual: 6
+queue 1 virtual 
+ id 0165_V current wait time 11 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0171_V current wait time 5 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173_V current wait time 3 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0174_V current wait time 2 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175_V current wait time 1 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 1175_V current wait time 1 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 11
+queue 2 
+ id 0152D current wait time 24 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0156D current wait time 20 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0160D current wait time 16 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0165D current wait time 11 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 11 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0171D current wait time 5 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 3 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 2 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 1 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 1 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 1 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+
+...
+
+==========================================
+tick # 176
+tick # 176 server 1 end service on customer 0171
+tick # 176 server 1 Virtual start service on customer 0165_V server time 5
+0165
+Queue 2 is serving 0151D
+id 0165 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 11 on 0165
+tick # 176 server 2 end service on customer 0151D
+number arrived 0
+queue 1: server busy false
+queue 1: 3
+queue 1 
+ id 0173 current wait time 4 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0174 current wait time 3 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175 current wait time 2 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 5
+queue 1 virtual 
+ id 0171_V current wait time 6 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173_V current wait time 4 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0174_V current wait time 3 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175_V current wait time 2 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 1175_V current wait time 2 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 2: server busy false
+queue 2: 11
+queue 2 
+ id 0152D current wait time 25 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0156D current wait time 21 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0160D current wait time 17 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0165D current wait time 12 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 12 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 11, 
+ id 0171D current wait time 6 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 4 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 3 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 2 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 2 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 2 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+...
+==========================================
+tick # 182
+	 switched 1182 and added to queue 2 
+tick # 182 server 1 end service on customer 0173
+tick # 182 server 1 Virtual start service on customer 0171_V server time 2
+number arrived 2
+queue 1: server busy false
+queue 1: 4
+queue 1 
+ id 0174 current wait time 9 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175 current wait time 8 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0178 current wait time 5 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182 current wait time 1 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 7
+queue 1 virtual 
+ id 0173_V current wait time 10 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0174_V current wait time 9 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175_V current wait time 8 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 1175_V current wait time 8 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178_V current wait time 5 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182_V current wait time 1 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1182_V current wait time 1 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 13
+queue 2 
+ id 0160D current wait time 23 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0165D current wait time 18 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 18 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 11, 
+ id 0171D current wait time 12 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 10 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 9 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 8 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 8 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 8 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178D current wait time 5 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 1 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 1 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 1 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+==========================================
+....
+==========================================
+tick # 187
+	 switched 0187 and added to queue 2 
+number arrived 1
+queue 1: server busy true
+queue 1: 2
+queue 1 
+ id 0178 current wait time 10 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182 current wait time 6 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 7
+queue 1 virtual 
+ id 0174_V current wait time 14 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0175_V current wait time 13 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 1175_V current wait time 13 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178_V current wait time 10 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182_V current wait time 6 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1182_V current wait time 6 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187_V current wait time 1 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 14
+queue 2 
+ id 0165D current wait time 23 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0165 current wait time 23 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 11, 
+ id 0171D current wait time 17 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 15 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 14 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 13 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 13 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 13 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178D current wait time 10 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 6 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 6 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 6 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187D current wait time 1 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 1 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+
+
+
+...
+==========================================
+tick # 193
+tick # 193 server 1 Virtual start service on customer 0175_V server time 4
+tick # 193 server 2 start service on customer 0165 server time 5
+	 switched client being served 
+ id 0165 current wait time 28 original queue 1  current queue 2 serverTime 5 wouldHaveWaitedTime 11
+number arrived 0
+queue 1: server busy true
+queue 1: 2
+queue 1 
+ id 0182 current wait time 12 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190 current wait time 4 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 6
+queue 1 virtual 
+ id 1175_V current wait time 19 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178_V current wait time 16 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182_V current wait time 12 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1182_V current wait time 12 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187_V current wait time 7 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190_V current wait time 4 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 13
+queue 2 
+ id 0171D current wait time 23 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 21 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 20 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 19 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 19 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 19 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0178D current wait time 16 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 12 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 12 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 12 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187D current wait time 7 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 7 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190D current wait time 4 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+==========================================
+
+...
+
+==========================================
+tick # 198
+	 switched 0198 and added to queue 2 
+tick # 198 server 1 end service on customer 0182
+tick # 198 server 1 Virtual start service on customer 1175_V server time 3
+1175
+Queue 2 is serving 0165
+id 1175 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 23 on 1175
+tick # 198 server 2 end service on customer 0165
+number arrived 1
+queue 1: server busy false
+queue 1: 2
+queue 1 
+ id 0190 current wait time 9 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195 current wait time 4 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 7
+queue 1 virtual 
+ id 0178_V current wait time 21 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182_V current wait time 17 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 1182_V current wait time 17 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187_V current wait time 12 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190_V current wait time 9 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195_V current wait time 4 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198_V current wait time 1 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 2: server busy false
+queue 2: 16
+queue 2 
+ id 0171D current wait time 28 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0173D current wait time 26 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0174D current wait time 25 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0175D current wait time 24 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 1175D current wait time 24 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 24 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 23, 
+ id 0178D current wait time 21 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 17 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 17 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 17 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0187D current wait time 12 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 12 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190D current wait time 9 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 4 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 1 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 1 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+==========================================
+...
+
+==========================================
+tick # 211
+tick # 211 server 1 start service on customer 0208 server time 5
+tick # 211 server 1 Virtual start service on customer 1182_V server time 2
+1182
+Queue 2 is serving 0174D
+id 1182 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 29 on 1182
+tick # 211 server 2 start service on customer 0175D server time 2
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 8
+queue 1 virtual 
+ id 0187_V current wait time 25 original queue 1  current queue 1 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190_V current wait time 22 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195_V current wait time 17 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198_V current wait time 14 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199_V current wait time 13 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0202_V current wait time 10 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0203_V current wait time 9 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208_V current wait time 4 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 16
+queue 2 
+ id 1175D current wait time 37 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1175 current wait time 37 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 23, 
+ id 0178D current wait time 34 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 30 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 30 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 30 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 29, 
+ id 0187D current wait time 25 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 25 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0190D current wait time 22 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 17 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 14 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 14 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199D current wait time 13 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 10 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 9 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 4 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+...
+
+==========================================
+tick # 214
+tick # 214 server 1 start service on customer 0214 server time 4
+tick # 214 server 1 Virtual start service on customer 0187_V server time 3
+0187
+Queue 2 is serving 0175D
+id 0187 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 27 on 0187
+tick # 214 server 2 start service on customer 1175D server time 1
+number arrived 1
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 9
+queue 1 virtual 
+ id 0190_V current wait time 25 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195_V current wait time 20 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198_V current wait time 17 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199_V current wait time 16 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0202_V current wait time 13 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0203_V current wait time 12 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208_V current wait time 7 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0212_V current wait time 3 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0214_V current wait time 1 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 17
+queue 2 
+ id 1175 current wait time 40 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 23, 
+ id 0178D current wait time 37 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 33 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 33 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 33 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 29, 
+ id 0187D current wait time 28 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 28 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 27, 
+ id 0190D current wait time 25 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 20 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 17 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 17 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199D current wait time 16 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 13 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 12 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 7 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 3 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 1 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+==========================================
+....
+
+==========================================
+tick # 216
+tick # 216 server 2 start service on customer 1175 server time 3
+	 switched client being served 
+ id 1175 current wait time 41 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 23
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 9
+queue 1 virtual 
+ id 0190_V current wait time 27 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195_V current wait time 22 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198_V current wait time 19 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199_V current wait time 18 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0202_V current wait time 15 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0203_V current wait time 14 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208_V current wait time 9 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0212_V current wait time 5 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0214_V current wait time 3 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 16
+queue 2 
+ id 0178D current wait time 39 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0182D current wait time 35 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 35 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 35 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 29, 
+ id 0187D current wait time 30 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 30 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 27, 
+ id 0190D current wait time 27 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 22 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 19 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 19 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0199D current wait time 18 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 15 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 14 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 9 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 5 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 3 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+==========================================
+...
+
+==========================================
+tick # 222
+tick # 222 server 1 Virtual start service on customer 0198_V server time 4
+0198
+Queue 2 is serving 0178D
+id 0198 is still in queue 2, so Q1 beat Q2. set wait time from virtual to Q2
+after setting wouldHaveWaitedTime to 24 on 0198
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 8
+queue 1 virtual 
+ id 0199_V current wait time 24 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0202_V current wait time 21 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0203_V current wait time 20 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208_V current wait time 15 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0212_V current wait time 11 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0214_V current wait time 9 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0217_V current wait time 6 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0221_V current wait time 2 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 17
+queue 2 
+ id 0182D current wait time 41 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 1182D current wait time 41 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 1182 current wait time 41 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 29, 
+ id 0187D current wait time 36 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 36 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 27, 
+ id 0190D current wait time 33 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 28 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 25 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 25 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 24, 
+ id 0199D current wait time 24 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 21 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 20 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 15 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 11 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 9 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0217D current wait time 6 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0221D current wait time 2 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+==========================================
+...
+
+==========================================
+tick # 229
+tick # 229 server 1 Virtual start service on customer 0202_V server time 2
+tick # 229 server 2 start service on customer 1182 server time 2
+	 switched client being served 
+ id 1182 current wait time 47 original queue 1  current queue 2 serverTime 2 wouldHaveWaitedTime 29
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 8
+queue 1 virtual 
+ id 0203_V current wait time 27 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208_V current wait time 22 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0212_V current wait time 18 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0214_V current wait time 16 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0217_V current wait time 13 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0221_V current wait time 9 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0226_V current wait time 4 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0227_V current wait time 3 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 16
+queue 2 
+ id 0187D current wait time 43 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0187 current wait time 43 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 27, 
+ id 0190D current wait time 40 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 35 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 32 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 32 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 24, 
+ id 0199D current wait time 31 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 28 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 27 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 22 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 18 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 16 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0217D current wait time 13 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0221D current wait time 9 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0226D current wait time 4 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0227D current wait time 3 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+==========================================
+....
+...
+
+....
+==========================================
+tick # 237
+tick # 237 server 2 start service on customer 0187 server time 3
+	 switched client being served 
+ id 0187 current wait time 50 original queue 1  current queue 2 serverTime 3 wouldHaveWaitedTime 27
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy true
+queue 1 virtual: 8
+queue 1 virtual 
+ id 0212_V current wait time 26 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0214_V current wait time 24 original queue 1  current queue 1 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0217_V current wait time 21 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0221_V current wait time 17 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0226_V current wait time 12 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0227_V current wait time 11 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0230_V current wait time 8 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0235_V current wait time 3 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 16
+queue 2 
+ id 0190D current wait time 48 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0195D current wait time 43 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0198D current wait time 40 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0198 current wait time 40 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 24, 
+ id 0199D current wait time 39 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 36 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 35 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 30 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 26 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 24 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0217D current wait time 21 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0221D current wait time 17 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0226D current wait time 12 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0227D current wait time 11 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0230D current wait time 8 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0235D current wait time 3 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+
+...
+==========================================
+tick # 250
+tick # 250 virtual server 1 end service on customer 0217_V
+tick # 250 server 2 start service on customer 0198 server time 4
+	 switched client being served 
+ id 0198 current wait time 52 original queue 1  current queue 2 serverTime 4 wouldHaveWaitedTime 24
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 8
+queue 1 virtual 
+ id 0221_V current wait time 30 original queue 1  current queue 1 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0226_V current wait time 25 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0227_V current wait time 24 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0230_V current wait time 21 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0235_V current wait time 16 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0238_V current wait time 13 original queue 1  current queue 1 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0239_V current wait time 12 original queue 1  current queue 1 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0246_V current wait time 5 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 15
+queue 2 
+ id 0199D current wait time 52 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0202D current wait time 49 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0203D current wait time 48 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0208D current wait time 43 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0212D current wait time 39 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0214D current wait time 37 original queue 2  current queue 2 serverTime 1 wouldHaveWaitedTime 0, 
+ id 0217D current wait time 34 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0221D current wait time 30 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0226D current wait time 25 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0227D current wait time 24 original queue 2  current queue 2 serverTime 4 wouldHaveWaitedTime 0, 
+ id 0230D current wait time 21 original queue 2  current queue 2 serverTime 2 wouldHaveWaitedTime 0, 
+ id 0235D current wait time 16 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+ id 0238D current wait time 13 original queue 2  current queue 2 serverTime 0 wouldHaveWaitedTime 0, 
+ id 0239D current wait time 12 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+ id 0246D current wait time 5 original queue 2  current queue 2 serverTime 5 wouldHaveWaitedTime 0, 
+==========================================
