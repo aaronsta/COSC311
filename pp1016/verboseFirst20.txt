@@ -1,0 +1,277 @@
+tick # 0
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 1
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 2
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 3
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 4
+tick # 4 server 1 start service on customer 04 server time 2
+tick # 4 server 1 Virtual start service on customer 04_V server time 2
+tick # 4 server 2 start service on customer 04D server time 4
+number arrived 1
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 5
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 6
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 7
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 8
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 9
+tick # 9 server 1 start service on customer 09 server time 4
+tick # 9 server 1 Virtual start service on customer 09_V server time 4
+tick # 9 server 2 start service on customer 09D server time 3
+number arrived 1
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 10
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 11
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 12
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 13
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 14
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 15
+tick # 15 server 1 start service on customer 015 server time 5
+tick # 15 server 1 Virtual start service on customer 015_V server time 5
+tick # 15 server 2 start service on customer 015D server time 1
+number arrived 1
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 16
+tick # 16 server 1 start service on customer 016 server time 0
+tick # 16 server 1 Virtual start service on customer 016_V server time 0
+tick # 16 server 2 start service on customer 016D server time 2
+number arrived 2
+queue 1: server busy true
+queue 1: 1
+queue 1 
+ id 116 current wait time 1 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy true
+queue 1 virtual: 1
+queue 1 virtual 
+ id 116_V current wait time 1 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 1
+queue 2 
+ id 116D current wait time 1 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+tick # 17
+tick # 17 server 1 end service on customer 016
+tick # 17 virtual server 1 end service on customer 016_V
+number arrived 0
+queue 1: server busy false
+queue 1: 1
+queue 1 
+ id 116 current wait time 2 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 1 virtual: server busy false
+queue 1 virtual: 1
+queue 1 virtual 
+ id 116_V current wait time 2 original queue 1  current queue 1 serverTime 1 wouldHaveWaitedTime 0, 
+queue 2: server busy true
+queue 2: 1
+queue 2 
+ id 116D current wait time 2 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+tick # 18
+tick # 18 server 1 start service on customer 116 server time 1
+tick # 18 server 1 Virtual start service on customer 116_V server time 1
+tick # 18 server 2 end service on customer 016D
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 1
+queue 2 
+ id 116D current wait time 3 original queue 2  current queue 2 serverTime 3 wouldHaveWaitedTime 0, 
+==========================================
+tick # 19
+tick # 19 server 2 start service on customer 116D server time 3
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
+tick # 20
+number arrived 0
+queue 1: server busy false
+queue 1: 0
+queue 1 
+queue 1 virtual: server busy false
+queue 1 virtual: 0
+queue 1 virtual 
+queue 2: server busy false
+queue 2: 0
+queue 2 
+==========================================
