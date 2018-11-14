@@ -45,9 +45,6 @@ public class Hashing {
 	}
 	
 	public static void main(String[] args) {
-
-		//double ratio = 0.0;
-		//int count = 0;
 		Random random  = new Random();	
 		random.setSeed(97);	
 		
@@ -68,36 +65,16 @@ public class Hashing {
 			max--;                          
 		}
 		
-/*
-		for (int j = 0; j < 20; j++){
-			System.out.println("inputArray " + j + " "  + inputArray[j]);
-		}
-*/		
 		int runSize = 8;
 		int tableSize = 8;
 		int[] hashTableFirst = new int[tableSize];
 		hashTableFirst = createHash(hashTableFirst,inputArray,runSize,tableSize);
 
-		//output first hash table
-		/*
-		for (int j = 0; j < runSize; j++){
-			System.out.println("at loc " + j  + " " + hashTableFirst[j]);
-		}
-		*/
-
 		runSize = 16;
 		tableSize = 16;
 		int[] hashTableSecond = new int[tableSize];
 		hashTableSecond = createHash(hashTableSecond,inputArray,runSize,tableSize);
-		
-		//output second hash table
-		/*
-		System.out.println("second");
-		for (int j = 0; j < runSize; j++){
-			System.out.println("at loc " + j  + " " + hashTableSecond[j]);
-		}
-		*/
-			
+
 		runSize = 20;
 		tableSize = 32;
 		int[] hashTableThird = new int[tableSize];
